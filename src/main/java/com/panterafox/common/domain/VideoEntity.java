@@ -1,5 +1,7 @@
 package com.panterafox.common.domain;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 
 /**
@@ -13,7 +15,8 @@ public class VideoEntity {
     private String reference;
 
     @Id
- //   @GeneratedValue(strategy=GenerationType.AUTO)
+    @GenericGenerator(name="gen",strategy="increment")
+    @GeneratedValue(generator="gen")
     @Column(name = "ID", nullable = false)
     public int getId() {
         return id;

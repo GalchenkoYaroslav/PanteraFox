@@ -40,7 +40,6 @@ public class VideoServiceTest {
     @Test
     public void testSaveVideoEntity()throws Exception{
         VideoEntity videoEntity = new VideoEntity();
-        videoEntity.setId(4);
         videoEntity.setName("1+1");
         videoEntity.setReference("www.1+1.com");
         videoService.add(videoEntity);
